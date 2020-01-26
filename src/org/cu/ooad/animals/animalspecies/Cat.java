@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Cat extends Feline {
     public Cat(String name) {
-        super(name, "Cat");
+        super(name);
     }
 
     public void makeNoise() {
@@ -35,8 +35,5 @@ public class Cat extends Feline {
                 sleep();
                 break;
         }
-//        System.out.println("Name: "+name);
-//        System.out.println("Type: "+type);
-//        System.out.println(name+" sleeps");
     }
 }

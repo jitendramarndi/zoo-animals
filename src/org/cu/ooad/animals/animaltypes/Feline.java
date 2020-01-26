@@ -4,8 +4,8 @@ package org.cu.ooad.animals.animaltypes;
 import org.cu.ooad.animals.Animal;
 
 public class Feline extends Animal {
-    public Feline(String name, String type) {
-        super(name, type);
+    public Feline(String name) {
+        super(name, "Feline");
     }
 
     public void roam() {

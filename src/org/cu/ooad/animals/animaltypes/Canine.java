@@ -3,8 +3,8 @@ package org.cu.ooad.animals.animaltypes;
 import org.cu.ooad.animals.Animal;
 
 public class Canine extends Animal {
-    public Canine(String name, String type) {
-        super(name, type);
+    public Canine(String name) {
+        super(name, "Canine");
     }
 
 

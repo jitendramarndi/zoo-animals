@@ -3,8 +3,8 @@ package org.cu.ooad.animals.animaltypes;
 import org.cu.ooad.animals.Animal;
 
 public class Pachyderm extends Animal {
-    public Pachyderm(String name, String type) {
-        super(name, type);
+    public Pachyderm(String name) {
+        super(name, "Pachyderm");
     }
 
     public void roam() {

@@ -45,9 +45,5 @@ public class Main {
         zoo.setAnimals(animalList);
         zoo.setZookeeper(zookeeper);
         zoo.start();
-//        FileWriter fileWriter = new FileWriter("c:/temp/samplefile2.txt");
-//        fileWriter.write(fileContent);
-//        fileWriter.close();
-
     }
 }
