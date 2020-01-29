@@ -17,7 +17,6 @@ public class Main {
         Zookeeper zookeeper = new Zookeeper("John");
         Zoo zoo = new Zoo();
         zoo.putAnimals(animalNames, animalSpecies);
-//        zoo.setAnimals(animalList);
         zoo.setZookeeper(zookeeper);
         zoo.start();
     }

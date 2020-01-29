@@ -3,7 +3,10 @@ import edu.cu.ooad.animals.Animal;
 import java.util.List;
 
 public class Zookeeper {
+
+    // A zookeeper must have a name
     private String name;
+
     public Zookeeper(String name) {
         this.name = name;
     }
