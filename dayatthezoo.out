@@ -1,41 +1,51 @@
 Waking up animals
+---------------------------
 Name: Chloe
-Type: Feline
+Type: Cat
 Chloe wakes up
 Name: Charlie
-Type: Feline
+Type: Cat
 Charlie wakes up
 Name: Dexter
-Type: Canine
+Type: Dog
 Dexter wakes up
 Name: Dan
-Type: Canine
+Type: Dog
 Dan wakes up
-Name: Luke
-Type: Feline
-Luke wakes up
-Name: L2
-Type: Feline
-L2 wakes up
-Name: H1
-Type: Pachyderm
-H1 wakes up
-Name: H2
-Type: Pachyderm
-H2 wakes up
-Name: E1
-Type: Pachyderm
-E1 wakes up
-Name: E2
-Type: Pachyderm
-E2 wakes up
-Name: R1
-Type: Pachyderm
-R1 wakes up
-Name: R2
-Type: Pachyderm
-R2 wakes up
+Name: Leo
+Type: Lion
+Leo wakes up
+Name: Lucy
+Type: Lion
+Lucy wakes up
+Name: Harry
+Type: Hippo
+Harry wakes up
+Name: Howard
+Type: Hippo
+Howard wakes up
+Name: Edward
+Type: Elephant
+Edward wakes up
+Name: Eddy
+Type: Elephant
+Eddy wakes up
+Name: Rad
+Type: Rhino
+Rad wakes up
+Name: Ruby
+Type: Rhino
+Ruby wakes up
+Name: Will
+Type: Wolf
+Will wakes up
+Name: Wade
+Type: Wolf
+Wade wakes up
+
+
 Roll calling animals
+---------------------------
 Name: Chloe
 Type: Cat
 Chloe says meow
@@ -43,143 +53,178 @@ Name: Charlie
 Type: Cat
 Charlie says meow
 Name: Dexter
-Type: Canine
+Type: Dog
 Dexter barks
 Name: Dan
-Type: Canine
+Type: Dog
 Dan barks
-Name: Luke
-Type: Feline
-Luke roars
-Name: L2
-Type: Feline
-L2 roars
-Name: H1
-Type: Pachyderm
-H1 says meow
-Name: H2
-Type: Pachyderm
-H2 says meow
-Name: E1
-Type: Pachyderm
-E1 says rumbles
-Name: E2
-Type: Pachyderm
-E2 says rumbles
-Name: R1
-Type: Pachyderm
-R1 says meow
-Name: R2
-Type: Pachyderm
-R2 says meow
+Name: Leo
+Type: Lion
+Leo roars
+Name: Lucy
+Type: Lion
+Lucy roars
+Name: Harry
+Type: Hippo
+Harry growls
+Name: Howard
+Type: Hippo
+Howard growls
+Name: Edward
+Type: Elephant
+Edward says rumbles
+Name: Eddy
+Type: Elephant
+Eddy says rumbles
+Name: Rad
+Type: Rhino
+Rad growls
+Name: Ruby
+Type: Rhino
+Ruby growls
+Name: Will
+Type: Wolf
+Will howls
+Name: Wade
+Type: Wolf
+Wade howls
+
+
 Feeding the animals
+---------------------------
 Name: Chloe
-Type: Feline
+Type: Cat
 Chloe eats
 Name: Charlie
-Type: Feline
+Type: Cat
 Charlie eats
 Name: Dexter
-Type: Canine
+Type: Dog
 Dexter eats
 Name: Dan
-Type: Canine
+Type: Dog
 Dan eats
-Name: Luke
-Type: Feline
-Luke eats
-Name: L2
-Type: Feline
-L2 eats
-Name: H1
-Type: Pachyderm
-H1 eats
-Name: H2
-Type: Pachyderm
-H2 eats
-Name: E1
-Type: Pachyderm
-E1 eats
-Name: E2
-Type: Pachyderm
-E2 eats
-Name: R1
-Type: Pachyderm
-R1 eats
-Name: R2
-Type: Pachyderm
-R2 eats
+Name: Leo
+Type: Lion
+Leo eats
+Name: Lucy
+Type: Lion
+Lucy eats
+Name: Harry
+Type: Hippo
+Harry eats
+Name: Howard
+Type: Hippo
+Howard eats
+Name: Edward
+Type: Elephant
+Edward eats
+Name: Eddy
+Type: Elephant
+Eddy eats
+Name: Rad
+Type: Rhino
+Rad eats
+Name: Ruby
+Type: Rhino
+Ruby eats
+Name: Will
+Type: Wolf
+Will eats
+Name: Wade
+Type: Wolf
+Wade eats
+
+
 Exercising the animals
+---------------------------
 Name: Chloe
-Type: Feline
+Type: Cat
 Chloe roams
 Name: Charlie
-Type: Feline
+Type: Cat
 Charlie roams
 Name: Dexter
-Type: Canine
+Type: Dog
 Dexter roams
 Name: Dan
-Type: Canine
+Type: Dog
 Dan roams
-Name: Luke
-Type: Feline
-Luke roams
-Name: L2
-Type: Feline
-L2 roams
-Name: H1
-Type: Pachyderm
-H1 roams
-Name: H2
-Type: Pachyderm
-H2 roams
-Name: E1
-Type: Pachyderm
-E1 roams
-Name: E2
-Type: Pachyderm
-E2 roams
-Name: R1
-Type: Pachyderm
-R1 roams
-Name: R2
-Type: Pachyderm
-R2 roams
+Name: Leo
+Type: Lion
+Leo roams
+Name: Lucy
+Type: Lion
+Lucy roams
+Name: Harry
+Type: Hippo
+Harry roams
+Name: Howard
+Type: Hippo
+Howard roams
+Name: Edward
+Type: Elephant
+Edward roams
+Name: Eddy
+Type: Elephant
+Eddy roams
+Name: Rad
+Type: Rhino
+Rad roams
+Name: Ruby
+Type: Rhino
+Ruby roams
+Name: Will
+Type: Wolf
+Will roams
+Name: Wade
+Type: Wolf
+Wade roams
+
+
 Shutting down the zoo
+---------------------------
 Name: Chloe
-Type: Feline
-Chloe eats
+Type: Cat
+Chloe wakes up
 Name: Charlie
 Type: Cat
 Charlie says meow
 Name: Dexter
-Type: Canine
+Type: Dog
 Dexter sleeps
 Name: Dan
-Type: Canine
+Type: Dog
 Dan sleeps
-Name: Luke
-Type: Feline
-Luke sleeps
-Name: L2
-Type: Feline
-L2 sleeps
-Name: H1
-Type: Pachyderm
-H1 sleeps
-Name: H2
-Type: Pachyderm
-H2 sleeps
-Name: E1
-Type: Pachyderm
-E1 sleeps
-Name: E2
-Type: Pachyderm
-E2 sleeps
-Name: R1
-Type: Pachyderm
-R1 sleeps
-Name: R2
-Type: Pachyderm
-R2 sleeps
+Name: Leo
+Type: Lion
+Leo sleeps
+Name: Lucy
+Type: Lion
+Lucy sleeps
+Name: Harry
+Type: Hippo
+Harry sleeps
+Name: Howard
+Type: Hippo
+Howard sleeps
+Name: Edward
+Type: Elephant
+Edward sleeps
+Name: Eddy
+Type: Elephant
+Eddy sleeps
+Name: Rad
+Type: Rhino
+Rad sleeps
+Name: Ruby
+Type: Rhino
+Ruby sleeps
+Name: Will
+Type: Wolf
+Will sleeps
+Name: Wade
+Type: Wolf
+Wade sleeps
+
+
