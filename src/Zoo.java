@@ -6,8 +6,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Zoo {
-    // Zoo will have animals and a zookeeper. So Zoo class has objects of animals and zookeeper.
 
+    // Zoo will have animals and a zookeeper. So Zoo class has objects of animals and zookeeper.
     private List<Animal> animals;
     private Zookeeper zookeeper;
 

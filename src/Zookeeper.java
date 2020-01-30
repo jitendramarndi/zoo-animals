@@ -11,6 +11,7 @@ public class Zookeeper {
         this.name = name;
     }
 
+    // This method uses other utility functions to execute the daily responsibilities of the zookeeper.
     public void executeResponsibilities(List<Animal> animals) {
         wakeAnimals(animals);
         rollCall(animals);

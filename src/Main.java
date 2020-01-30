@@ -7,6 +7,8 @@ import java.util.List;
 
 public class Main {
 
+    // The main method uses a member of zoo class to create Animal objects with the below given names and types.
+    // It then creates the Zookeeper object and passes it to the Zoo object.
     public static void main(String[] args) {
         List<Animal> animalList = new ArrayList<>();
         List<String> animalNames = new ArrayList<>(Arrays.asList(new String[]{"Chloe", "Charlie", "Dexter", "Dan", "Leo",
