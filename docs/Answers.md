@@ -124,6 +124,252 @@ public class TestEmployee
 } 
 ```
 
+(Web references used for this answer - https://www.geeksforgeeks.org/encapsulation-in-java/ and https://www.tutorialspoint.com/java/java_encapsulation.htm )
+ 
+---
+
+### Question 1 - Part B
+
+**Abstraction**
+
+Abstraction is a process of hiding the implementation details from the user, and only providing the functionality. In other words, the user will have the information on what the object does instead of how it does it.
+
+Consider a real-life example of a man driving a car. The man only knows that pressing the accelerators will increase the speed of car or applying brakes will stop the car but he does not know about how on pressing the accelerator the speed is actually increasing, he does not know about the inner mechanism of the car or the implementation of accelerator, brakes etc in the car. This is what abstraction is.
+
+In the Object Oriented notion, abstraction is achieved via **Abstract classes** and **Interfaces**. We can achieve 100% abstraction by using interfaces. The key difference between abstract classes and normal classes is that abstract classes **cannot be instantiated**.
+
+#
+
+**Good use of Abstraction:**
+
+The code snippet below shows an abstract Employee class that has some private variables, an abstract method getSalary() and a public getters and setters. This Employee class is inherited by two other classes HourlyEmployee and MonthlyEmployee, which now need to have concrete implementations of the getSalary() method. The advantage of doing this is that since the Employee class is abstract, the outside classes do not have implementation details of the concrete methods in the Employee class. The code snippet below demonstrates this idea:
+
+```Java
+
+public class Employee 
+{ 
+    // private variables declared  
+    // these can only be accessed by  
+    // public methods of class 
+    private String name; 
+    private long empID; 
+    private int age; 
+  
+    // Abstract method
+    public abstract Double getSalary();
+  
+    // Concrete methods
+    // get method to access private variable age 
+    public int getAge()  
+    { 
+      return age; 
+    } 
+   
+    // get method to access private variable name 
+    public String getName()  
+    { 
+      return name; 
+    } 
+      
+    // get method to access private variable empID 
+    public long getEmpID()  
+    { 
+       return empID; 
+    } 
+   
+    // set method to access private variable age 
+    public void setAge(int age) 
+    { 
+      this.age = age; 
+    } 
+   
+    // set method to access private variable name 
+    public void setName(String name) 
+    { 
+      this.name = name; 
+    } 
+      
+    // set method to access private variable empID 
+    public void setEmpID(long empID)  
+    { 
+      this.empID = empID; 
+    } 
+}
+
+public class HourlyEmployee extends Employee {
+    private Double hourlyPay;
+    private Double hoursWorked;
+    
+    public HourlyEmployee(hourlyPay, hoursWorked) {
+      this.hourlyPay = hourlyPay;
+      this.hoursWorked = hoursWorked;
+    }
+    
+    public Double getHourlyPay() {
+      return hourlyPay;
+    }
+    
+    public Double getHoursWorked() {
+      return hoursWorked;
+    }
+    
+    // Implementation of the getSalary() abstract method
+    public Double getSalary() {
+      return hourlyPay*hoursWorked;
+    }
+}
+
+public class MonthlyEmployee extends Employee {
+    private Double monthlyPay;
+    private Double daysWorked;
+    
+    public MonthlyEmployee(monthlyPay, daysWorked) {
+      this.monthlyPay = monthlyPay;
+      this.daysWorked = daysWorked;
+    }
+    
+    public Double getMonthlyPay() {
+      return monthlyPay;
+    }
+    
+    public Double getDaysWorked() {
+      return daysWorked;
+    }
+    
+    // Implementation of the getSalary() abstract method
+    public Double getSalary() {
+      return monthlyPay*daysWorked;
+    }
+}
+
+public class TestEmployee {
+
+   public static void main(String [] args) {
+      Employee hourlyEmployee = new HourlyEmployee(15.00, 2500.00);
+      Employee monthlyEmployee = new MonthlyEmployee(2000.00, 25.00);
+      System.out.println("Hourly Employe salary is " + hourlyEmployee.getSalary());
+      System.out.println("Monthly Employe salary is " + monthlyEmployee.getSalary());
+   }
+}
+```
+#
+
+**Bad use of Abstraction:**
+
+Now instead of a single getSalary() abstract method, we had one abstract method defined for every type of employee that extends the Employee class. That is, instead of getSalary(), we have 2 abstract methods in the Employee class - getHourlySalary() and getMonthlySalary(). This constitutes a bad abstraction design as it is not truly using the power of abstraction and these methods don't really need to be abstract. The code snippet below demonstrates this idea:
+
+```Java
+
+public class Employee 
+{ 
+    // private variables declared  
+    // these can only be accessed by  
+    // public methods of class 
+    private String name; 
+    private long empID; 
+    private int age; 
+  
+    // 2 Abstract methods
+    // 1 each for 2 types of employees - Hourly and Monthly 
+    public abstract Double getHourlySalary();
+    public abstract Double getMonthlySalary();
+
+    // Concrete methods
+    // get method to access private variable age 
+    public int getAge()  
+    { 
+      return age; 
+    } 
+   
+    // get method to access private variable name 
+    public String getName()  
+    { 
+      return name; 
+    } 
+      
+    // get method to access private variable empID 
+    public long getEmpID()  
+    { 
+       return empID; 
+    } 
+   
+    // set method to access private variable age 
+    public void setAge(int age) 
+    { 
+      this.age = age; 
+    } 
+   
+    // set method to access private variable name 
+    public void setName(String name) 
+    { 
+      this.name = name; 
+    } 
+      
+    // set method to access private variable empID 
+    public void setEmpID(long empID)  
+    { 
+      this.empID = empID; 
+    } 
+}
+
+public class HourlyEmployee extends Employee {
+    private Double hourlyPay;
+    private Double hoursWorked;
+    
+    public HourlyEmployee(hourlyPay, hoursWorked) {
+      this.hourlyPay = hourlyPay;
+      this.hoursWorked = hoursWorked;
+    }
+    
+    public Double getHourlyPay() {
+      return hourlyPay;
+    }
+    
+    public Double getHoursWorked() {
+      return hoursWorked;
+    }
+    
+    // Implementation of the getHourlySalary() abstract method
+    public Double getHourlySalary() {
+      return hourlyPay*hoursWorked;
+    }
+}
+
+public class MonthlyEmployee extends Employee {
+    private Double monthlyPay;
+    private Double daysWorked;
+    
+    public MonthlyEmployee(monthlyPay, daysWorked) {
+      this.monthlyPay = monthlyPay;
+      this.daysWorked = daysWorked;
+    }
+    
+    public Double getMonthlyPay() {
+      return monthlyPay;
+    }
+    
+    public Double getDaysWorked() {
+      return daysWorked;
+    }
+    
+    // Implementation of the getMonthlySalary() abstract method
+    public Double getMonthlySalary() {
+      return monthlyPay*daysWorked;
+    }
+}
+
+public class TestEmployee {
+
+   public static void main(String [] args) {
+      Employee hourlyEmployee = new HourlyEmployee(15.00, 2500.00);
+      Employee monthlyEmployee = new MonthlyEmployee(2000.00, 25.00);
+      System.out.println("Hourly Employe salary is " + hourlyEmployee.getHourlySalary());
+      System.out.println("Monthly Employe salary is " + monthlyEmployee.getMonthlySalary());
+   }
+}
+```
+(Web references used for this answer - https://www.geeksforgeeks.org/abstraction-in-java-2/ and https://www.tutorialspoint.com/java/java_abstraction.htm )
+
 ---
 
 ### Question 1 - Part C
@@ -377,6 +623,8 @@ identity with employee name is futile.
 On the other hand if we use employee ID, which is ensured to be unique for each
 employee, for object creation; each object can be assumed to represent the
 unique employee.
+
+(No references used for this answer.)
 
 ---
 
