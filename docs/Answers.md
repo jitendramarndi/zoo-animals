@@ -1,3 +1,131 @@
+### Ouestion 1 - Part A
+
+**Encapsulation**
+
+Encapsulation is defined as the wrapping up of data(variables) and the code acting on the data(methods) under a single unit. In other words, it is a protective shield that prevents the data from being accessed by the code outside this shield.
+
+In the Object Oriented notion of a class, the variables of a class are hidden from any other class and can be accessed only through any member functions of the same class in which they are declared. These functions are generally known as **getters** and **setters**.
+
+To achieve encapsulation, the data in a class is hidden from other classes using the **data hiding** concept which is achieved by making the members variables of class as private and making them accessible to the outside world via public getter and setter methods.
+
+#
+
+**Good use of Encapsulation:**
+
+The code snippet below shows an Employee class that has private fields like name, age and employeeID. These private fields are accessible to external classes via the public getter and setter methods. Here, we use the concept of data hiding to hide any sensitive data from the outside world by binding the data(variables) and the code(methods) to create a _protective shield_ for that data. The following code demostrates this idea:
+
+```java
+
+public class Employee 
+{ 
+    // private variables declared  
+    // these can only be accessed by  
+    // public methods of class 
+    private String name; 
+    private long empID; 
+    private int age; 
+  
+    // get method to access private variable age 
+    public int getAge()  
+    { 
+      return age; 
+    } 
+   
+    // get method to access private variable name 
+    public String getName()  
+    { 
+      return name; 
+    } 
+      
+    // get method to access private variable empID 
+    public long getEmpID()  
+    { 
+       return empID; 
+    } 
+   
+    // set method to access private variable age 
+    public void setAge(int age) 
+    { 
+      this.age = age; 
+    } 
+   
+    // set method to access private variable name 
+    public void setName(String name) 
+    { 
+      this.name = name; 
+    } 
+      
+    // set method to access private variable empID 
+    public void setEmpID(long empID)  
+    { 
+      this.empID = empID; 
+    } 
+}
+
+
+public class TestEmployee 
+{     
+    public static void main (String[] args)  
+    { 
+        Employee emp = new Employee(); 
+          
+        // setting values of the variables  
+        emp.setName("Raj"); 
+        emp.setAge(23); 
+        emp.setEmpID(987654321); 
+          
+        // Displaying values of the variables 
+        System.out.println("Employee's name: " + emp.getName()); 
+        System.out.println("Employee's age: " + emp.getAge()); 
+        System.out.println("Employee's ID: " + emp.getEmpID()); 
+          
+	// This is NOT allowed, since name is a private field.
+        // System.out.println("Employee's name: " + emp.name);         
+    } 
+} 
+```
+
+#
+
+**Bad use of Encapsulation:**
+
+Now instead of declaring the variables as private in the Employee class, if we declared them as public, then they would be freely accessible to the outside world. Any class would simply access it by instantiating the Employee class. This does not adhere to the data hiding principles as it makes sensitive data freely available to the outside world, since in this case we would not need getters and setters since the class variables themselves are public. This also means that any outside class can manipulate the Employee class' properties. The following code demonstrates this:
+
+
+```java
+
+public class Employee 
+{ 
+    // public variables declared are freely accessible
+    public String name; 
+    public long empID; 
+    public int age; 
+  
+    // No need of setters and getters
+}
+
+
+public class TestEmployee 
+{     
+    public static void main (String[] args)  
+    { 
+        Employee emp = new Employee(); 
+          
+        // setting values of the variables directly
+        emp.name = "Raj"
+        emp.age = 23
+	emp.empID = 987654321
+	
+        // Displaying values of the variables by direct access 
+        System.out.println("Employee's name: " + emp.name); 
+        System.out.println("Employee's age: " + emp.age); 
+        System.out.println("Employee's ID: " + emp.empID);         
+    } 
+} 
+```
+
+---
+
 ### Question 1 - Part C
 
 **Polymorphism**
