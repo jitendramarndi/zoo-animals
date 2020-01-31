@@ -66,6 +66,7 @@ Cohesion indicates the degree to which a class or function has a single, well-fo
 
 The below code snippet shows a class with less cohesiveness which has the responsibility of multiple unrelated tasks. Here, HondaCrv class maintains a list of the customers who bought it. Logically, the task of maintaining customer names should not be the responsibility of HondaCrv class. So this class has low cohesion.
 
+
 ```java
 class HondaCrv {
     private List<String> customerNames;
@@ -117,3 +118,183 @@ class HondaCrvCustomers {
     }
 }
 ```
+
+
+
+### Q1.e
+
+Coupling refers to the interdependency between different software components such as
+methods, classes, modules etc. We typically require weak coupling for better maintenance
+of the code. Following code snippets exemplify strong and weak coupling respectively.
+
+Register class keeps minimum information about students namely name and hometown.
+Query class is used to get hometown from the Register given student ID. If we want to
+modify Register to include a piece of extra information say the department of each
+student right after the name then we need to update the addStudent method of Register
+class. We also need to update the getHomeTown of Query class as the index of hometown
+changed due to the insertion of new information into the list. This happens because
+class Query implementation is dependent on Register data. This dependency can be
+removed if we add the getHomeTown method into Register class itself and forward the call
+from Query class as done in CASE 2. Thus all changes will be in the Register class and
+Query class can remain the same.
+
+**Bad Example**
+```java
+// CASE 1: STRONG COUPLING
+public class Register {
+	private HashMap<Integer, List<String>> students_;
+
+	public void addStudent(Integer sid, String name, String hometown)
+	{
+		List<String> student = new ArrayList<>();
+		student.add(name);
+		// If we add department here, getHomeTown of Query class need to be updated
+		student.add(hometown);
+		students_.put(sid, student);
+	}
+
+	public HashMap<Integer,List<String>> getStudentRegister()
+	{
+		return students_;
+	}
+}
+
+class Query {
+	private Register register_;
+
+	public Query(Register register)
+	{
+		register_ = register;
+	}
+
+	public String getHomeTown(Integer sid)
+	{
+		Map<Integer,List<String>> students = register_.getStudentRegister();
+		List<String> student = students.get(sid);
+		if(student != null)
+		{
+			return student.get(1);
+		}
+		return "SID not found";
+	}
+}
+```
+
+**Good Example**
+```java
+// CASE 2: WEAK COUPLING
+public class Register {
+	private HashMap<Integer, List<String>> students_;
+
+	public void addStudent(Integer sid, String name, String hometown)
+	{
+		List<String> student = new ArrayList<>();
+		student.add(name);
+		// If we add department here, NO changes in Query class is needed
+		student.add(hometown);
+		students_.put(sid, student);
+	}
+
+	public String getHomeTown(Integer sid)
+	{
+		List<String> student = students_.get(sid);
+		if(student != null)
+		{
+			return student.get(1);
+		}
+		return "SID not found";
+	}
+}
+
+class Query {
+	private Register register_;
+
+	public Query(Register register)
+	{
+		register_ = register;
+	}
+
+	public String getHomeTown(Integer sid)
+	{
+		return register_.getHomeTown(sid);
+	}
+}
+
+```
+
+
+### Q1.f
+
+**Identity**
+
+Object identity is the property by virtue of which an object is uniquely identified.
+Quite often we can identify the object with its memory location, unique integer
+associated with it, etc. Care must be taken to distinguish objects that hold the
+same values and identical objects.
+
+**A bad usage:**
+
+Consider a class with a single field of type String which is initialized by
+the argument passed to its constructor. Suppose in a payroll system we want to use
+this object (i.e. value it holds in String field) to represent employees.
+If we use the name of the employee to create objects, the system might fail
+because two employees can have the exact name. So, such an association of object
+identity with employee name is futile.
+
+**A good usage:**
+
+On the other hand if we use employee ID, which is ensured to be unique for each
+employee, for object creation; each object can be assumed to represent the
+unique employee.
+
+
+### Q2
+The following methods depict the functional decomposition approach to the
+implementation of a payroll system.
+
+```java
+// Return a list of IDs of all the employees that need to be paid
+List getEmployeeID()
+
+// Identify the type of the employee i.e. hourly or monthly
+String getEmployeeStatus(Employee ID)
+
+// Number of hours worked by an hourly employee
+Double payableHours(Employee ID)
+
+// Number of days worked by the monthly employee
+Double payableDays(Employee ID)
+
+// Calculate payment for an hourly employee
+Double calculatePayHourly(Employee ID)
+	return payableHours(Employee ID) times hourly payment
+
+// Calculate payment for monthly employee
+Double calculatePayMonthly(Employee ID) 
+	return payableDays(Employee ID) times per day payment
+
+// Calculate payment of an employee
+Double calculatePay(Employee ID)
+	If getEmployeeStatus(Employee ID) is hourly
+		return calculatePayHourly(Employee ID)
+	else
+		return calculatePayMonthly(Employee ID)
+
+// Retrieve salary account details of an employee
+Account getSalaryAccount(Employee ID)
+
+// Initiate payment of the specified amount to the specified account
+void initiatePayment(Account acc, Double amount)
+```
+
+The above functions assume that all the relevant information is available in the
+database. Such as hourly and per day payment amount, salary account of all the employees.
+It’s also assumed that suitable database API is available for high-level queries such as
+fetching employee ID and status.
+
+The following flowchart depicts the high-level flow of the main function of the
+payroll system.
+
+<p align="center">
+  <img src="OOAD_Project1_Payroll_Func.png" alt="Flow chart for the main function">
+</p>
