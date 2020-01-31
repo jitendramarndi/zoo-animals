@@ -295,3 +295,81 @@ payroll system.
 <p align="center">
   <img src="OOAD_Project1_Payroll_Func.png" alt="Flow chart for the main function">
 </p>
+
+### Question 3
+
+**Payroll System - Object Oriented Approach**
+
+---
+
+**The Design**
+
+Using Object Oriented Paradigm, a payroll management system can be designed using the following classes:
+
+* **Employee**: This abstract class (italicized in the class diagram) represents an Employee of the organization. It consists of private fields like name, age, employee ID (eid), etc. that are particular to each employee. It also consists of getter methods that allow access to private fields of this class. Additionally it also has an abstract method - getPay, which gets the amount of money to be paid to employees based on their status.
+
+  * HourlyEmployee: A subclass of the Employee class, this class represents an hourly employee of the organization. It consists of a private field namely “hourlyPay” which signifies the hourly pay of that particular employee and getters to provide access to the private fields of this class.
+
+  * MonthlyEmployee: Also a subclass of the Employee class, this class represents a monthly employee of the organization. It consists of a private field namely “monthlyPay” which signifies the monthly pay of that particular employee and getters to provide access to the private fields of this class.
+
+* **PayrollManagementSystem**: This class represents the Payroll system that is being used by the organization. It has public fields like version and policy and a host of public functions. This system can be thought of as a dashboard presented to employees and accountants in a real-world application. Some of the functions that it performs are:
+
+  * authorizeEmployee and authorizeAccountant: Authorizes the user using the eid and password fields.
+
+  * getUserDetails: Gets the Employee details using eid.
+
+  * getPaymentDetails: Gets payment details of the employee using eid. Returns a SalaryAccount object. 
+
+  * initiatePayment: Makes a payment to the Employees bank account using the SalaryAccount object previously retrieved. Returns the transaction ID of the transfer.
+
+  * recordTransaction: Records the transaction details using the transaction ID into the database.
+
+  * fileDiscrepancy: Allows employees to file a discrepancy in their salary calculation using the transaction ID.
+
+  * displaySalaryDetails: Display salary details to the employee.
+
+* **Accountant**: This class represents the accountants in the organization who perform the following functions:
+
+  * getEmployeeList: Get the list of all employee IDs.
+
+  * calculateTax: Calculate tax for each employee.
+
+  * calculateAllowance: Calculate allowance for each employee.
+
+  * calculateGrossSalary: Calculate the gross salary for each employee.
+
+  * issueSalary: Issue the salary to each employee by adding it to the database.
+
+* **SalaryAccount**: This class represents the bank account details of an employee with private fields like accountNumber, routingNumber, bankBranchID. It also has a getter method that returns the account details for an employee.
+
+Following figure depicts the payroll management system as a class diagram:
+
+<p align="center">
+  <img src="Q3 - Class Diagram.png" alt="Class Diagram">
+</p>
+
+We can observe from the above description and class diagram that the fundamental OO properties, namely, Abstraction, Encapsulation, Inheritance and Polymorphism are inherent in the system. 
+
+---
+
+**Class Instantiation Sequence**
+
+Here we’re assuming the presence of a “Main” class in order to execute this system in an OO based language.
+
+1. **Employee** and **SalaryAccount**: The main class will first create multiple instances of the Employee class, which basically represents all the employees in the organization. Since each employee has a bank account associated with them, we will also instantiate SalaryAccount for each instance of the Employee class.
+
+2. **Accountant**: Next, we will instantiate multiple instances of the Accountant class, which represent the accountants in the organization. Each accountant has a set of Employees for whom they need to calculate the gross salary and then upload the gross salary to the database.
+
+3. **PayrollManagementSystem**: Finally, we will instantiate the PayrollManagementSystem class that will perform the duties of issuing the salary to the Employee bank accounts as well as allow the employees to retrieve their salary information and raise any discrepancies.
+
+---
+
+**Interaction Among Classes**
+
+1. Each instantiation of the Employee class also instantiates a SalaryAccount object that stores the bank account details of that employee. (“has a” relationship)
+
+2. The HourlyEmployee and MonthlyEmployee classes extend the abstract Employee class to instantiate employees based on their status.
+
+3. Employee class uses the PayrollManagementSystem to get salary details and file discrepancies.
+
+4. The Accountant class uses the getPay() method to get the payable amount for each Employee instance.
