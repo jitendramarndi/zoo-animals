@@ -1,4 +1,4 @@
-### Q1.c
+### Question 1 - Part C
 
 **Polymorphism**
 
@@ -9,9 +9,9 @@ In the context of class, Polymorphism allows us to use an instance of the child 
 
 The two other types of polymorphism are - Runtime polymorphism and Compile-time polymorphism. Runtime polymorphism occurs when a method in the parent class is overridden by the child class. Now, the function call will be resolved at runtime depending on the instance being used. It is also known as Function overriding. Compile time polymorphism includes function overloading and operator overloading.
 
-<br/>
+#
 
-**Good use:**
+**Good use of Polymorphism:**
 
 One of the good uses of polymorphism is that it can refer to interfaces instead of implementations (using subtype polymorphism). Here the interface acts as a parent class in terms of its role, but it is not a class. In the below code, if we use a specific implementation of List\<String> such as ArrayList or LinkedList as the return type, then the method getAllModelNames() is restricted to use that specific implementation. Instead, if we use List\<String> then getAllModelNames() is given the choice of using any class implementation according to its requirement.
 
@@ -22,10 +22,9 @@ class HondaCar {
     }
 }
 ```
+#
 
-<br/>
-
-**Bad use:**
+**Bad use of Polymorphism:**
 
 Suppose the requirement is that we want to restrict the child class from overriding some methods of parent class. We cannot achieve this because of the runtime polymorphism capability available in Object-oriented programming. So, this is an example where polymorphism is used incorrectly. The below example needs to use the 'final' keyword to prevent subclasses from overriding the implementation of method1().
 
@@ -47,19 +46,17 @@ class B extends A {
 
 (Web Reference used for this answer - https://www.tutorialspoint.com/java/java_polymorphism.htm)
 
-<br/>
+---
 
-
-### Q1.d
+### Question 1 - Part D
 
 **Cohesion**
 
 Cohesion indicates the degree to which a class or function has a single, well-focused purpose. In the context of Object-oriented classes, if a class has low cohesion, then it means that it is performing multiple tasks. On the other hand, if it has high cohesion, then it means that it has one single and well-focused responsibility. Higher cohesiveness leads to better design. The same is applicable to methods or functions in the program.
 
+#
 
-<br/>
-
-**Bad use of cohesion:**
+**Bad use of Cohesion:**
 
 The below code snippet shows a class with less cohesiveness which has the responsibility of multiple unrelated tasks. Here, HondaCrv class maintains a list of the customers who bought it. Logically, the task of maintaining customer names should not be the responsibility of HondaCrv class. So this class has low cohesion.
 
@@ -79,10 +76,9 @@ class HondaCrv {
     // other variables and methods definition of HondaCrv class
 }
 ```
+#
 
-<br/>
-
-**Good use of cohesion:**
+**Good use of Cohesion:**
 
 One of the good use of cohesion is where the class has high cohesion and has only one and well-focused responsibility. The ‘HondaCrv’ class has the behavior and properties related to Honda CRV car only. The HondaCrvCustomer class has the task of maintaining a list of customers who bought Honda CRV. The Customer  class is a more high-level class that maintains the details of a single customer. All these classes have only one clear responsibility and hence have high cohesion.
 
@@ -117,8 +113,9 @@ class HondaCrvCustomers {
 ```
 (Web reference used for this answer - https://sanaulla.info/2008/06/26/cohesion-and-coupling-two-oo-design-principles/)
 
+---
 
-### Q1.e
+### Question 1 - Part E
 
 Coupling refers to the interdependency between different software components such as
 methods, classes, modules etc. We typically require weak coupling for better maintenance
@@ -135,7 +132,9 @@ removed if we add the getHomeTown method into Register class itself and forward 
 from Query class as done in CASE 2. Thus all changes will be in the Register class and
 Query class can remain the same.
 
-**Bad Example**
+#
+
+**Bad use of Coupling:**
 ```java
 // CASE 1: STRONG COUPLING
 public class Register {
@@ -176,8 +175,9 @@ class Query {
 	}
 }
 ```
+#
 
-**Good Example**
+**Good use of Coupling:**
 ```java
 // CASE 2: WEAK COUPLING
 public class Register {
@@ -218,9 +218,11 @@ class Query {
 }
 
 ```
+(Web references used for this answer - https://www.geeksforgeeks.org/coupling-in-java/ and https://blog.ndepend.com/programming-coupling/ )
 
+---
 
-### Q1.f
+### Question 1 - Part F
 
 **Identity**
 
@@ -229,7 +231,9 @@ Quite often we can identify the object with its memory location, unique integer
 associated with it, etc. Care must be taken to distinguish objects that hold the
 same values and identical objects.
 
-**A bad usage:**
+#
+
+**Bad use of Identity:**
 
 Consider a class with a single field of type String which is initialized by
 the argument passed to its constructor. Suppose in a payroll system we want to use
@@ -238,14 +242,22 @@ If we use the name of the employee to create objects, the system might fail
 because two employees can have the exact name. So, such an association of object
 identity with employee name is futile.
 
-**A good usage:**
+#
+
+**Good use of Identity:**
 
 On the other hand if we use employee ID, which is ensured to be unique for each
 employee, for object creation; each object can be assumed to represent the
 unique employee.
 
+---
 
-### Q2
+### Question 2
+
+**Payroll System - Functional Decomposition Approach**
+
+#
+
 The following methods depict the functional decomposition approach to the
 implementation of a payroll system.
 
@@ -296,11 +308,13 @@ payroll system.
   <img src="OOAD_Project1_Payroll_Func.png" alt="Flow chart for the main function">
 </p>
 
+---
+
 ### Question 3
 
 **Payroll System - Object Oriented Approach**
 
----
+#
 
 **The Design**
 
@@ -350,7 +364,7 @@ Following figure depicts the payroll management system as a class diagram:
 
 We can observe from the above description and class diagram that the fundamental OO properties, namely, Abstraction, Encapsulation, Inheritance and Polymorphism are inherent in the system. 
 
----
+#
 
 **Class Instantiation Sequence**
 
@@ -362,7 +376,7 @@ Here we’re assuming the presence of a “Main” class in order to execute thi
 
 3. **PayrollManagementSystem**: Finally, we will instantiate the PayrollManagementSystem class that will perform the duties of issuing the salary to the Employee bank accounts as well as allow the employees to retrieve their salary information and raise any discrepancies.
 
----
+#
 
 **Interaction Among Classes**
 
