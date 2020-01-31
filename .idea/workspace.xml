@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d19694d2-0ea1-440e-b8ef-c993853295fb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayatthezoo.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayatthezooerr.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cu/ooad/animals/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cu/ooad/animals/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalfamilies/Canine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalfamilies/Canine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalfamilies/Feline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalfamilies/Feline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalfamilies/Pachyderm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalfamilies/Pachyderm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Elephant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Elephant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Hippo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Hippo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Lion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Lion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Rhino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Rhino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Tiger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Tiger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Wolf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Wolf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Answers.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Answers.pdf" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,6 +13,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/edu/cu/ooad/animals/animalfamilies/Canine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/cu/ooad/animals/animalspecies/Elephant.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -63,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/cu/ooad/animals/Animal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="234">
+              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -201,6 +196,19 @@
               <item name="zoo-animals" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="zoo-animals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zoo-animals" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="animals" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zoo-animals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zoo-animals" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="animals" type="462c0819:PsiDirectoryNode" />
+              <item name="animalfamilies" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -208,7 +216,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580456209298" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580490935513" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -344,13 +352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/cu/ooad/animals/animalfamilies/Canine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/cu/ooad/animals/animalfamilies/Feline.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -440,11 +441,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/cu/ooad/animals/Animal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="234">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/cu/ooad/animals/animalfamilies/Canine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="29" />
         </state>
       </provider>
     </entry>

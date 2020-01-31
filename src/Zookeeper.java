@@ -7,6 +7,14 @@ public class Zookeeper {
     // A zookeeper must have a name
     private String name;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Zookeeper(String name) {
         this.name = name;
     }
