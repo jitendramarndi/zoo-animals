@@ -2,9 +2,22 @@
 
 **Polymorphism**
 
-Polymorphism refers to the design that enables an object or a method to take on multiple forms. 
+Polymorphism refers to the design that enables an object or a method to 
+take on multiple forms. It is also applicable to methods where they can take on 
+multiple forms depending on some factors.
 
-When we use an instance of the child class to initialize or assign to a parent class reference variable, it is polymorphism. This type of polymorphism is also known as subtype polymorphism, as the child class will be a subtype of the parent class. The two other types of polymorphism are - Function overriding (runtime polymorphism) and Function overloading (compile-time polymorphism).
+In the context of class, Polymorphism allows us to use an instance of the 
+child class to initialize or assign to a parent class reference variable, 
+This type of polymorphism is also known as subtype polymorphism, as the child 
+class will be a subtype of the parent class. 
+
+The two other types of polymorphism are - Runtime polymorphism and 
+Compile-time polymorphism. Runtime polymorphism occurs when 
+a method in the parent class is overridden by the child class. Now, the function call will be 
+resolved at runtime depending on the instance being used. It is also known as Function overriding.
+Compile time polymorphism is function overloading. It occurs when the same function name is used 
+in the multiple function definitions. Which function to be called will be resolved depending on the
+number and type of parameters used in the function call.  
 
 **Good use:**
 
@@ -56,9 +69,10 @@ class B extends A {
 **Cohesion**
 
 Cohesion indicates the degree to which a class or function has a single, well-focused 
-purpose. If a class or method has low cohesion, then it means that it is performing 
-multiple tasks. On the other hand, if it has high cohesion, then it means that it has 
-one single and well-focused responsibility. Higher cohesiveness leads to better design.
+purpose. In the context of Object-oriented classes, if a class has low cohesion, then it 
+means that it is performing multiple tasks. On the other hand, if it has high cohesion, 
+then it means that it has one single and well-focused responsibility. Higher cohesiveness 
+leads to better design. The same is applicable to methods or functions in the program.
 
 **Bad use of cohesion:**
 
