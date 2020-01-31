@@ -9,14 +9,11 @@ In the context of class, Polymorphism allows us to use an instance of the child 
 
 The two other types of polymorphism are - Runtime polymorphism and Compile-time polymorphism. Runtime polymorphism occurs when a method in the parent class is overridden by the child class. Now, the function call will be resolved at runtime depending on the instance being used. It is also known as Function overriding. Compile time polymorphism includes function overloading and operator overloading.
 
-
- It occurs when the same function name is used in the multiple function definitions. Which function to be called will be resolved depending on the number and type of parameters used in the function call.  
-
 <br/>
 
 **Good use:**
 
-One of the good uses of polymorphism is that it can refer to interfaces instead of implementations. Here the interface acts as a parent class in terms of its role, but it is not a class. In the below code, if we use a specific implementation of List\<String> such as ArrayList or LinkedList as the return type, then the method getAllModelNames() is restricted to use that specific implementation. Instead, if we use List\<String> then getAllModelNames() is given the choice of using any class implementation according to its requirement.
+One of the good uses of polymorphism is that it can refer to interfaces instead of implementations (using subtype polymorphism). Here the interface acts as a parent class in terms of its role, but it is not a class. In the below code, if we use a specific implementation of List\<String> such as ArrayList or LinkedList as the return type, then the method getAllModelNames() is restricted to use that specific implementation. Instead, if we use List\<String> then getAllModelNames() is given the choice of using any class implementation according to its requirement.
 
 ```java
 class HondaCar {
@@ -118,7 +115,7 @@ class HondaCrvCustomers {
     }
 }
 ```
-
+(Web reference used for this answer - https://sanaulla.info/2008/06/26/cohesion-and-coupling-two-oo-design-principles/)
 
 
 ### Q1.e
