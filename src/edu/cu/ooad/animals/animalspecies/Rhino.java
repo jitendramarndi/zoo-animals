@@ -16,5 +16,6 @@ public class Rhino extends Pachyderm {
         System.out.println("Name: "+name);
         System.out.println("Type: " + type);
         System.out.println(name+" growls");
+        System.out.println();
     }
 }

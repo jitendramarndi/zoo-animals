@@ -15,5 +15,6 @@ public abstract class Canine extends Animal {
         System.out.println("Name: "+name);
         System.out.println("Type: "+type);
         System.out.println(name+" roams");
+        System.out.println();
     }
 }

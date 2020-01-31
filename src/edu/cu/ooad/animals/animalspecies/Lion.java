@@ -16,5 +16,6 @@ public class Lion extends Feline {
         System.out.println("Name: "+name);
         System.out.println("Type: " + type);
         System.out.println(name+" roars");
+        System.out.println();
     }
 }

@@ -37,18 +37,21 @@ public abstract class Animal {
         System.out.println("Name: "+name);
         System.out.println("Type: "+type);
         System.out.println(name+" wakes up");
+        System.out.println();
     }
 
     public void eat() {
         System.out.println("Name: "+name);
         System.out.println("Type: "+type);
         System.out.println(name+" eats");
+        System.out.println();
     }
 
     public void sleep() {
         System.out.println("Name: "+name);
         System.out.println("Type: "+type);
         System.out.println(name+" sleeps");
+        System.out.println();
     }
 
     // Making the below members abstract because the child classes have to implement this method for their instantiation.

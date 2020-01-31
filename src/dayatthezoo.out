@@ -3,45 +3,59 @@ Waking up animals
 Name: Chloe
 Type: Cat
 Chloe wakes up
+
 Name: Charlie
 Type: Cat
 Charlie wakes up
+
 Name: Dexter
 Type: Dog
 Dexter wakes up
+
 Name: Dan
 Type: Dog
 Dan wakes up
+
 Name: Leo
 Type: Lion
 Leo wakes up
+
 Name: Lucy
 Type: Lion
 Lucy wakes up
+
 Name: Harry
 Type: Hippo
 Harry wakes up
+
 Name: Howard
 Type: Hippo
 Howard wakes up
+
 Name: Edward
 Type: Elephant
 Edward wakes up
+
 Name: Eddy
 Type: Elephant
 Eddy wakes up
+
 Name: Rad
 Type: Rhino
 Rad wakes up
+
 Name: Ruby
 Type: Rhino
 Ruby wakes up
+
 Name: Will
 Type: Wolf
 Will wakes up
+
 Name: Wade
 Type: Wolf
 Wade wakes up
+
 
 
 Roll calling animals
@@ -95,45 +109,59 @@ Feeding the animals
 Name: Chloe
 Type: Cat
 Chloe eats
+
 Name: Charlie
 Type: Cat
 Charlie eats
+
 Name: Dexter
 Type: Dog
 Dexter eats
+
 Name: Dan
 Type: Dog
 Dan eats
+
 Name: Leo
 Type: Lion
 Leo eats
+
 Name: Lucy
 Type: Lion
 Lucy eats
+
 Name: Harry
 Type: Hippo
 Harry eats
+
 Name: Howard
 Type: Hippo
 Howard eats
+
 Name: Edward
 Type: Elephant
 Edward eats
+
 Name: Eddy
 Type: Elephant
 Eddy eats
+
 Name: Rad
 Type: Rhino
 Rad eats
+
 Name: Ruby
 Type: Rhino
 Ruby eats
+
 Name: Will
 Type: Wolf
 Will eats
+
 Name: Wade
 Type: Wolf
 Wade eats
+
 
 
 Exercising the animals
@@ -186,45 +214,59 @@ Shutting down the zoo
 ---------------------------
 Name: Chloe
 Type: Cat
-Chloe roams
+Chloe wakes up
+
 Name: Charlie
 Type: Cat
-Charlie says meow
+Charlie eats
+
 Name: Dexter
 Type: Dog
 Dexter sleeps
+
 Name: Dan
 Type: Dog
 Dan sleeps
+
 Name: Leo
 Type: Lion
 Leo sleeps
+
 Name: Lucy
 Type: Lion
 Lucy sleeps
+
 Name: Harry
 Type: Hippo
 Harry sleeps
+
 Name: Howard
 Type: Hippo
 Howard sleeps
+
 Name: Edward
 Type: Elephant
 Edward sleeps
+
 Name: Eddy
 Type: Elephant
 Eddy sleeps
+
 Name: Rad
 Type: Rhino
 Rad sleeps
+
 Name: Ruby
 Type: Rhino
 Ruby sleeps
+
 Name: Will
 Type: Wolf
 Will sleeps
+
 Name: Wade
 Type: Wolf
 Wade sleeps
+
 
 

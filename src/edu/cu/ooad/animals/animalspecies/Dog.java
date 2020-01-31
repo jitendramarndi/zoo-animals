@@ -16,5 +16,6 @@ public class Dog extends Canine {
         System.out.println("Name: "+name);
         System.out.println("Type: " + type);
         System.out.println(name+" barks");
+        System.out.println();
     }
 }

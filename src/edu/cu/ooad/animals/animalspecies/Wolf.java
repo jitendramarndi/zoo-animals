@@ -16,5 +16,6 @@ public class Wolf extends Canine {
         System.out.println("Name: "+name);
         System.out.println("Type: " + type);
         System.out.println(name+" howls");
+        System.out.println();
     }
 }
