@@ -1,4 +1,14 @@
-### Ouestion 1 - Part A
+# OOAD - Homework 1 (Questions 1-3)
+
+## Team Members:
+
+1. **Madhusudhan Aithal Mahabhaleshwara**
+2. **Raj Chandak**
+3. **Jitendra Marndi**
+
+---
+
+### Question 1 - Part A
 
 **Encapsulation**
 
